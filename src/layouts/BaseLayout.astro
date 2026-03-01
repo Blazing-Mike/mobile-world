@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 
+const base = import.meta.env.BASE_URL;
+
 interface Props {
   title?: string;
 }
@@ -21,12 +23,12 @@ const { title = "Mobile World Timaru" } = Astro.props;
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/cropped-android-chrome-512x512-1-32x32.png"
+      href={`${base}cropped-android-chrome-512x512-1-32x32.png`}
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/cropped-android-chrome-512x512-1-180x180.png"
+      href={`${base}cropped-android-chrome-512x512-1-180x180.png`}
     />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
